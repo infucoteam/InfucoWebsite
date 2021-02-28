@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styled, {keyframes} from 'styled-components';
 import { colors, device } from '../../helpers/constants';
 import Header from '../../components/Header';
@@ -225,6 +226,11 @@ const HomePage_1 = (props) => {
         }
     `;
 
+    const getStarted = () => {
+        // console.log('ok');
+        
+    }
+
     return(
         <Div>
             <Header toggleDrawer={props.toggleDrawer}/>
@@ -237,7 +243,8 @@ const HomePage_1 = (props) => {
                         One of the trusted organisation for your one and all digital marketing services. We value our customers, which makes us the leading organisation in this domain.
                     </TitleText3>
                     <CTA>
-                        <CTAText>Get Started</CTAText>
+                        {/* <CTAText onClick={getStarted}>Get Started</CTAText> */}
+                        <Link style={{textDecoration:'none',color:'inherit'}} to='/contactus'><CTAText>Get Started</CTAText></Link>
                     </CTA>
                 </TitleDiv>
                 <ImageDiv>
